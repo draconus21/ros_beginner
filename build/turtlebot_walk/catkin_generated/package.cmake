@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "turtlebot_walk")
+set(turtlebot_walk_MAINTAINER "sandeep <sandeep@todo.todo>")
+set(turtlebot_walk_DEPRECATED "")
+set(turtlebot_walk_VERSION "0.0.0")
+set(turtlebot_walk_BUILD_DEPENDS "geometry_msgs" "roscpp" "sensor_msgs" "std_msgs")
+set(turtlebot_walk_RUN_DEPENDS "geometry_msgs" "roscpp" "sensor_msgs" "std_msgs")
+set(turtlebot_walk_BUILDTOOL_DEPENDS "catkin")

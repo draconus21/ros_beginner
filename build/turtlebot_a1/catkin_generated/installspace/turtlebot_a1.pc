@@ -1,0 +1,8 @@
+prefix=/home/neeth/catkin_ws/install
+
+Name: turtlebot_a1
+Description: Description of turtlebot_a1
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/neeth/catkin_ws/install/lib 
+Requires: 
