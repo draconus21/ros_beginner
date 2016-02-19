@@ -7,6 +7,7 @@ project(beginner_tutorials)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  tf
   std_msgs
   message_generation
 )
@@ -101,9 +102,9 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+#  CATKIN_DEPENDS roscpp rospy std_msgs tf turtlesim
 #  DEPENDS system_lib
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime 
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime tf
 )
 
 ###########

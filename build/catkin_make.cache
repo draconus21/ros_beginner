@@ -1,2 +1,2 @@
-beginner_tutorials:turtlebot_a1:turtlebot_walk
+beginner_tutorials:learning_tf:turtlebot_a1:turtlebot_walk
 -DCATKIN_DEVEL_PREFIX=/home/neeth/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/neeth/catkin_ws/install -G Unix Makefiles

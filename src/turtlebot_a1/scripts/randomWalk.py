@@ -105,7 +105,7 @@ def randomWalk():
             vel.angular.y = 0.0
             vel.angular.z = 0.0
             cmd_pub.publish(vel)
-            rate.sleep()
+        rate.sleep()
 
 
 if __name__ == '__main__':
