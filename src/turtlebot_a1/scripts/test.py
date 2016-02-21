@@ -15,8 +15,10 @@ def callback(m_state):
     obj_list = np.array(m_state.name)
     m_base = np.where(obj_list == 'mobile_base')[0][0]
     pose   = m_state.pose[m_base]
+    pos    = pose.position
     ori    = pose.orientation
-    print ori
+    print ori.x, ori.y, ori.z, ori.w
+    #print np.arccos(ori.w) * 2,  np.arcsin(ori.z)  * 2
     works = True
 
 def spawnMBase(x,  y):
@@ -40,9 +42,7 @@ def spawnMBase(x,  y):
         print 'Service Exception:', e
 
 def getMBasePosition():
-    sub = rp.Subscriber('/gazebo/model_states', ModelStates, callback, queue_size=1000)
-    pub = rp.Publisher('/gazebo/set_model_states', ModelStates, queue_size=1000)
-    print 'test'
+    sub = rp.Subscriber('/gazebo/model_states', ModelStates, callback, queue_size=1000)    
     rate = rp.Rate(4)
     while not rp.is_shutdown():
         rate.sleep()
@@ -55,7 +55,7 @@ if __name__=='__main__':
 #    if len(sys.argv) == 3:
 #        x = int(sys.argv[1])
 #        y = int(sys.argv[2])
-
+    spawnMBase(0, 0)
     getMBasePosition()
 #    spawnMBase(x, y)
 

@@ -1,0 +1,8 @@
+prefix=/home/neeth/catkin_ws/install
+
+Name: neeth_tbot
+Description: Description of neeth_tbot
+Version: 0.0.0
+Cflags: -I/home/neeth/catkin_ws/install/include
+Libs: -L/home/neeth/catkin_ws/install/lib 
+Requires: 

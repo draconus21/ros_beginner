@@ -121,6 +121,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/neeth/catkin_ws/build/turtlebot_a1/cmake_install.cmake")
   INCLUDE("/home/neeth/catkin_ws/build/turtlebot_walk/cmake_install.cmake")
   INCLUDE("/home/neeth/catkin_ws/build/learning_tf/cmake_install.cmake")
+  INCLUDE("/home/neeth/catkin_ws/build/neeth_tbot/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

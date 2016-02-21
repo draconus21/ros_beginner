@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(turtlebot_a1_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/neeth/catkin_ws/devel/include " STREQUAL " ")
   set(turtlebot_a1_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/neeth/catkin_ws/devel/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(turtlebot_a1_EXPORTED_TARGETS "")
+set(turtlebot_a1_EXPORTED_TARGETS "turtlebot_a1_generate_messages_cpp;turtlebot_a1_generate_messages_lisp;turtlebot_a1_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${turtlebot_a1_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -153,7 +153,7 @@ foreach(t ${turtlebot_a1_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "geometry_msgs;roscpp;rospy;sensor_msgs;std_msgs;message_runtime;tf")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

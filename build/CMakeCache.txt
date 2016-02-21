@@ -257,17 +257,104 @@ actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/indigo/share/angles/cmake
+
 //Value Computed by CMake
 beginner_tutorials_BINARY_DIR:STATIC=/home/neeth/catkin_ws/build/beginner_tutorials
 
 //Value Computed by CMake
 beginner_tutorials_SOURCE_DIR:STATIC=/home/neeth/catkin_ws/src/beginner_tutorials
 
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/indigo/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/indigo/share/bondcpp/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/indigo/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/indigo/share/diagnostic_updater/cmake
+
+//The directory containing a CMake configuration file for ecl_build.
+ecl_build_DIR:PATH=/opt/ros/indigo/share/ecl_build/cmake
+
+//The directory containing a CMake configuration file for ecl_command_line.
+ecl_command_line_DIR:PATH=/opt/ros/indigo/share/ecl_command_line/cmake
+
+//The directory containing a CMake configuration file for ecl_concepts.
+ecl_concepts_DIR:PATH=/opt/ros/indigo/share/ecl_concepts/cmake
+
+//The directory containing a CMake configuration file for ecl_config.
+ecl_config_DIR:PATH=/opt/ros/indigo/share/ecl_config/cmake
+
+//The directory containing a CMake configuration file for ecl_containers.
+ecl_containers_DIR:PATH=/opt/ros/indigo/share/ecl_containers/cmake
+
+//The directory containing a CMake configuration file for ecl_converters.
+ecl_converters_DIR:PATH=/opt/ros/indigo/share/ecl_converters/cmake
+
+//The directory containing a CMake configuration file for ecl_devices.
+ecl_devices_DIR:PATH=/opt/ros/indigo/share/ecl_devices/cmake
+
+//The directory containing a CMake configuration file for ecl_eigen.
+ecl_eigen_DIR:PATH=/opt/ros/indigo/share/ecl_eigen/cmake
+
+//The directory containing a CMake configuration file for ecl_errors.
+ecl_errors_DIR:PATH=/opt/ros/indigo/share/ecl_errors/cmake
+
+//The directory containing a CMake configuration file for ecl_exceptions.
+ecl_exceptions_DIR:PATH=/opt/ros/indigo/share/ecl_exceptions/cmake
+
+//The directory containing a CMake configuration file for ecl_formatters.
+ecl_formatters_DIR:PATH=/opt/ros/indigo/share/ecl_formatters/cmake
+
+//The directory containing a CMake configuration file for ecl_geometry.
+ecl_geometry_DIR:PATH=/opt/ros/indigo/share/ecl_geometry/cmake
+
+//The directory containing a CMake configuration file for ecl_linear_algebra.
+ecl_linear_algebra_DIR:PATH=/opt/ros/indigo/share/ecl_linear_algebra/cmake
+
+//The directory containing a CMake configuration file for ecl_math.
+ecl_math_DIR:PATH=/opt/ros/indigo/share/ecl_math/cmake
+
+//The directory containing a CMake configuration file for ecl_mobile_robot.
+ecl_mobile_robot_DIR:PATH=/opt/ros/indigo/share/ecl_mobile_robot/cmake
+
+//The directory containing a CMake configuration file for ecl_mpl.
+ecl_mpl_DIR:PATH=/opt/ros/indigo/share/ecl_mpl/cmake
+
+//The directory containing a CMake configuration file for ecl_sigslots.
+ecl_sigslots_DIR:PATH=/opt/ros/indigo/share/ecl_sigslots/cmake
+
+//The directory containing a CMake configuration file for ecl_streams.
+ecl_streams_DIR:PATH=/opt/ros/indigo/share/ecl_streams/cmake
+
+//The directory containing a CMake configuration file for ecl_threads.
+ecl_threads_DIR:PATH=/opt/ros/indigo/share/ecl_threads/cmake
+
+//The directory containing a CMake configuration file for ecl_time.
+ecl_time_DIR:PATH=/opt/ros/indigo/share/ecl_time/cmake
+
+//The directory containing a CMake configuration file for ecl_time_lite.
+ecl_time_lite_DIR:PATH=/opt/ros/indigo/share/ecl_time_lite/cmake
+
+//The directory containing a CMake configuration file for ecl_type_traits.
+ecl_type_traits_DIR:PATH=/opt/ros/indigo/share/ecl_type_traits/cmake
+
+//The directory containing a CMake configuration file for ecl_utilities.
+ecl_utilities_DIR:PATH=/opt/ros/indigo/share/ecl_utilities/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
@@ -309,6 +396,21 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for kobuki_driver.
+kobuki_driver_DIR:PATH=/opt/ros/indigo/share/kobuki_driver/cmake
+
+//The directory containing a CMake configuration file for kobuki_keyop.
+kobuki_keyop_DIR:PATH=/opt/ros/indigo/share/kobuki_keyop/cmake
+
+//The directory containing a CMake configuration file for kobuki_msgs.
+kobuki_msgs_DIR:PATH=/opt/ros/indigo/share/kobuki_msgs/cmake
+
+//The directory containing a CMake configuration file for kobuki_node.
+kobuki_node_DIR:PATH=/opt/ros/indigo/share/kobuki_node/cmake
+
+//The directory containing a CMake configuration file for kobuki_safety_controller.
+kobuki_safety_controller_DIR:PATH=/opt/ros/indigo/share/kobuki_safety_controller/cmake
+
 //Value Computed by CMake
 learning_tf_BINARY_DIR:STATIC=/home/neeth/catkin_ws/build/learning_tf
 
@@ -316,7 +418,7 @@ learning_tf_BINARY_DIR:STATIC=/home/neeth/catkin_ws/build/learning_tf
 learning_tf_SOURCE_DIR:STATIC=/home/neeth/catkin_ws/src/learning_tf
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libtf2.so
+lib:FILEPATH=/opt/ros/indigo/lib/libecl_streams.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
@@ -326,6 +428,21 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
+
+//Value Computed by CMake
+neeth_tbot_BINARY_DIR:STATIC=/home/neeth/catkin_ws/build/neeth_tbot
+
+//Value Computed by CMake
+neeth_tbot_SOURCE_DIR:STATIC=/home/neeth/catkin_ws/src/neeth_tbot
+
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/opt/ros/indigo/share/nodelet/cmake
+
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
@@ -345,6 +462,9 @@ rosgraph_DIR:PATH=/opt/ros/indigo/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
+
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
 
@@ -353,6 +473,9 @@ rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
+
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/indigo/share/smclib/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
@@ -392,6 +515,9 @@ turtlesim_DIR:PATH=/opt/ros/indigo/share/turtlesim/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
+
+//The directory containing a CMake configuration file for yocs_controllers.
+yocs_controllers_DIR:PATH=/opt/ros/indigo/share/yocs_controllers/cmake
 
 
 ########################
@@ -495,7 +621,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
