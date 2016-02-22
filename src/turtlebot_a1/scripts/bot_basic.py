@@ -11,6 +11,7 @@ from turtlebot_a1.srv import MoveBot
 from constants import *
  
 vel  = Twist()
+mbState = ModelState()
 
 def spawnMBase(x=DEF_X, y = DEF_Y):
     mState = ModelState()
@@ -28,16 +29,22 @@ def spawnMBase(x=DEF_X, y = DEF_Y):
 
     mState.pose.position    = pos
     mState.pose.orientation = ori
-    print serviceThis(SET_MODEL_STATE, SetModelState, mState)
-    #print status, '-', msg
-
+    mState.twist = twist_no_vel()
+    mState.reference_frame  = 'world'
+    stop()
+    status = serviceThis(SET_MODEL_STATE, SetModelState, mState)
+    mbState = mState
+    #print status
+    #print mState
 
 def mBaseStateCallback(mStates):
     #print np.array(mStates).shape
 
     obj_list = np.array(mStates.name)
     mBase    = np.where(obj_list == BOT)[0][0]
-    print mStates.pose[mBase]
+    #print mStates.pose[mBase]
+    mbState.pose  = mStates.pose[mBase]
+    mbState.twist = mStates.twist[mBase]
     #return mStates.post[mBase]
 
 def subscribeThis(subName, subType, callback, q_size=Q_SIZE, loop=True, rate=RATE, dur=DURATION):
@@ -54,22 +61,19 @@ def subscribeThis(subName, subType, callback, q_size=Q_SIZE, loop=True, rate=RAT
             r.sleep()
 
 def getMBaseState(loop=True, dur=DURATION):
-    print 'getting state'
+    #print 'getting state'
     #rp.init_node('MBaseState')
     subscribeThis(MODEL_STATES, ModelStates, mBaseStateCallback, loop=loop, dur=dur)
 
 def serviceThis(srvName, cmdType, srvCmd):
     nName = srvName.split('/')[-1] + '_service'
 #    rp.init_node(nName)
-    print 'init node:', nName
-    print 'waiting for service:', srvName
     rp.wait_for_service(srvName)
-    print 'got lock on serivce:', srvName
 
     try:
         sms = rp.ServiceProxy(srvName, cmdType)
-        print 'service name:', srvName
-        print 'serivce cmd val:', str(srvCmd)
+#        print 'service name:', srvName
+#        print 'serivce cmd val:', str(srvCmd)
         return sms(srvCmd)
     except rp.ServiceException as e:
         print 'Service Exception: ', srvName, '\n', e
@@ -101,6 +105,15 @@ def move(direction, dur, vel=FWD_SPD):
     rp.sleep(dur)
     stop()
 
+def mvSpl(dirVec, dur, vel=FWD_SPD):
+    cmd = twist_no_vel()
+    cmd.linear.x = dirVec[0]
+    cmd.linear.y = dirVec[1]
+    #print 'vel', cmd
+    pub_cmd(cmd)
+    rp.sleep(dur)
+    stop()
+
 def mvFwd(dur=DURATION, vel=FWD_SPD):
     move(direction=FWD, dur=dur, vel=vel)
 
@@ -127,17 +140,17 @@ def turnA(angle, vel=ANG_SPD):
     rad = angle * np.pi /180
     dur = np.abs(rad/vel)
     if dur == 0:
-        print 'duration: 0'
+#        print 'duration: 0'
         return 
-    print 'turning for:', dur
-    if angle == 0:
-        print 'angle:', angle
+#    print 'turning for:', dur
+#    if angle == 0:
+#        print 'angle:', angle
 
     if angle > 0:
-        print 'turning right at angle:', angle
+#        print 'turning right at angle:', angle
         turnR(dur, vel)
     else:
-        print 'turning left at angle:', angle
+#        print 'turning left at angle:', angle
         turnL(dur, vel)
 def stop():
     cmd = twist_no_vel() 
@@ -154,8 +167,8 @@ if __name__=='__main__':
     if len(sys.argv) > 2:
         vel = int(sys.argv[2])
 
-    mvFwd(2)
-    #turnA(ang, vel)
+    #mvFwd(2)
+    turnA(ang, vel)
     #getMBaseState(False)
     #if len(sys.argv) == 3:
     #    if str(sys.argv[1]) == 'f':

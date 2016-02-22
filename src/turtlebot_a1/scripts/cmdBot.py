@@ -30,7 +30,7 @@ def exec_cmd():
     rp.init_node('cmd_bot')
     pub = rp.Publisher(CMD_VEL, Twist, queue_size=Q_SIZE)
     srv = rp.Service(MOVE_BOT_SRV, MoveBot, new_cmd)
-    r = rp.Rate(DURATION)
+    r = rp.Rate(RATE)
     print 'Ready for new commands'
     
     while not rp.is_shutdown():
